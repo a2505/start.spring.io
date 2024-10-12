@@ -8,6 +8,13 @@ running at https://start.spring.io. The following modules are available:
 * `start-site`: server infrastructure and metadata configuration
 * `start-site-verification`: tests to verify the validity of the metadata
 
+[[Different]]
+== Different
+
+基于官方代码进行修改，支持Java 8 以及Spring Boot 2.7.18。
+
+Modified based on official code, supporting Java 8 and Spring Boot 2.7.18.
+
 [[using]]
 == Using
 There is a link:USING.adoc[dedicated page] that describes how you can interact with the
