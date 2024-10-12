@@ -35,22 +35,22 @@ import io.spring.initializr.generator.version.Version;
  */
 public class JavaVersionProjectDescriptionCustomizer implements ProjectDescriptionCustomizer {
 
-	private static final List<String> UNSUPPORTED_VERSIONS = Arrays.asList("1.6", "1.7", "1.8");
+	private static final List<String> UNSUPPORTED_VERSIONS = Arrays.asList("1.6", "1.7");
 
 	@Override
 	public void customize(MutableProjectDescription description) {
 		Version platformVersion = description.getPlatformVersion();
 		String javaVersion = description.getLanguage().jvmVersion();
 		if (UNSUPPORTED_VERSIONS.contains(javaVersion)) {
-			updateTo(description, "17");
+			updateTo(description, "8");
 			return;
 		}
 		Integer javaGeneration = determineJavaGeneration(javaVersion);
 		if (javaGeneration == null) {
 			return;
 		}
-		if (javaGeneration < 17) {
-			updateTo(description, "17");
+		if (javaGeneration < 8) {
+			updateTo(description, "8");
 		}
 		if (javaGeneration >= 22) {
 			if (isKotlin(description)) {

@@ -160,7 +160,7 @@ initializr:
           - compatibilityRange: "[3.2.0,3.4.0-M1)"
             version: 24.4.13
     platform:
-      compatibilityRange: "3.2.0"
+      compatibilityRange: "2.7.18"
   dependencies:
     - name: Developer Tools
       content:
@@ -1699,7 +1699,7 @@ initializr:
         build: gradle
         dialect: groovy
         format: project
-      default: true
+      default: false
       action: /starter.zip
     - name: Gradle - Kotlin
       id: gradle-project-kotlin
@@ -1732,7 +1732,7 @@ initializr:
       tags:
         build: maven
         format: build
-      default: false
+      default: true
       action: /pom.xml
   packagings:
     - name: Jar
@@ -1747,6 +1747,8 @@ initializr:
     - id: 21
       default: false
     - id: 17
+      default: false
+    - id: 8
       default: true
   languages:
     - name: Java
@@ -1764,14 +1766,16 @@ initializr:
       default: false
     - name: 3.3.0
       id: 3.3.0
-      default: true
+      default: false
     - name: 3.2.7 (SNAPSHOT)
       id: 3.2.7-SNAPSHOT
       default: false
     - name: 3.2.6
       id: 3.2.6
       default: false
-
+    - name: 2.7.18
+      id: 2.7.18
+      default: true
 ---
 
 spring:
