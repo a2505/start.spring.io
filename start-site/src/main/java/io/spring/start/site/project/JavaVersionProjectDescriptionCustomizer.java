@@ -38,7 +38,7 @@ public class JavaVersionProjectDescriptionCustomizer implements ProjectDescripti
 
 	@Override
 	public void customize(MutableProjectDescription description) {
-        String javaVersion = description.getLanguage().jvmVersion();
+		String javaVersion = description.getLanguage().jvmVersion();
 		if (UNSUPPORTED_VERSIONS.contains(javaVersion)) {
 			updateTo(description, "8");
 			return;
